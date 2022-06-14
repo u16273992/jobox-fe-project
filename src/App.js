@@ -14,7 +14,7 @@ export default App;
 
 const styles = {
   background:{
-    backgroundColor: "snow",
+    backgroundColor: "#f8f9fa",
   },
   heading: {
 

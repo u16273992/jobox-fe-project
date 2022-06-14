@@ -1,14 +1,12 @@
 import React from 'react';
 import Content from './content';
 
-const space = 0.5;
-
 export default function Page(props) {
   return (
     <div style={styles.pages}>
       <div style={styles.page}>
         <header>
-            <h6 style={styles.header}>RECTRUITMENT RATES AND TERMS AGREEMENT</h6>  
+            <p style={styles.header}>RECTRUITMENT RATES AND TERMS AGREEMENT</p>  
         </header>
         <Content page={props.number}/>
       </div>
@@ -26,6 +24,7 @@ const styles = {
       marginLeft: "2.5cm",
       width: "16cm",
       borderBottom: "1px solid black",
+      fontSize: "10px"
     },
 
     title: {
@@ -44,7 +43,7 @@ const styles = {
       width: "21cm",
       height: "29.7cm",
       border: '1px solid black',
-      marginTop: '10px'
+      marginTop: '0.265cm',
     },
     pages:{
       display: 'flex',

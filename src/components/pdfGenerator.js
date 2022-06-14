@@ -55,7 +55,8 @@ const styles = {
     width: "21cm",
     height: "29.7cm",
     border: '1px solid black',
-    marginTop: '10px'
+    marginTop: '0.265cm',
+    marginBottom: '0.265cm'
   },
   pages:{
     display: 'flex',
