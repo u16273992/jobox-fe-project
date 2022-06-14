@@ -1,10 +1,10 @@
 import './App.css';
-import PDFgenerator from './components/pdfGenerator';
+import Contract from './components/contract';
 
 function App() {
   return (
     <div style={styles.background}>
-      <PDFgenerator/>
+      <Contract/>
     </div>
     
   );

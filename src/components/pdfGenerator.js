@@ -1,11 +1,11 @@
 import React from 'react';
-import '../styles/Styles.css';
 
 export default function PDFgenerator() {
   return (
     <div>
     <div style={styles.pages}>
       <div style={styles.page}>
+        <header style={styles.header}></header>
         <h1 style={styles.heading}>
           hello from pdfGenerator
         </h1> 
@@ -34,6 +34,12 @@ export default function PDFgenerator() {
 const styles = {
   background:{
     backgroundColor: "#f0f4f3"
+  },
+  header:{
+    marginTop: "3cm",
+    marginLeft: "2.5cm",
+    width: "16cm",
+    borderBottom: "1px solid black"
   },
   heading: {
   color: "orange",
