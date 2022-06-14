@@ -3,12 +3,30 @@ import '../styles/Styles.css';
 
 export default function PDFgenerator() {
   return (
+    <div>
     <div style={styles.pages}>
       <div style={styles.page}>
         <h1 style={styles.heading}>
           hello from pdfGenerator
         </h1> 
       </div>
+    </div>
+    <div style={styles.pages}>
+      <div style={styles.head}></div>
+      <div style={styles.page}>
+        <h1 style={styles.heading}>
+          hello from pdfGenerator
+        </h1> 
+      </div>
+    </div>
+    <div style={styles.pages}>
+      <div style={styles.head}></div>
+      <div style={styles.page}>
+        <h1 style={styles.heading}>
+          hello from pdfGenerator
+        </h1> 
+      </div>
+    </div>
     </div>
   )
 }
@@ -30,6 +48,8 @@ const styles = {
     textAlign: "center",
     width: "21cm",
     height: "29.7cm",
+    border: '1px solid black',
+    marginTop: '10px'
   },
   pages:{
     display: 'flex',

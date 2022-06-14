@@ -14,8 +14,7 @@ export default App;
 
 const styles = {
   background:{
-    flex:1,
-    backgroundColor: "red",
+    backgroundColor: "snow",
   },
   heading: {
 
