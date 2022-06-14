@@ -38,7 +38,9 @@ const styles = {
     position: "fixed",
     bottom: "0.5rem",
     right: "0.5rem",
-    boxShadow: "0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)"
+    boxShadow: "0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)",
+    width: "4cm",
+    height: "1cm"
   }
 
 }
