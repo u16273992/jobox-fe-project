@@ -23,57 +23,73 @@ export default function Content(props) {
  {
     return (
         <div style={style.heading2}>
-            <p style={{fontWeight:"bold"}}>1. &emsp; Payment Terms:</p>
-            <ul style={{listStyleType:"disc"}}>
-                <li>BMF Attorney’s fee [Insert Payment Amount] (excluding VAT). The retainer fee 
-                    can be paid upfront, or month-to-month and the payment terms can be payable 
-                    as follows:
-                </li>
-                <ul style={{listStyleType:"circle", marginTop:"0.1cm"}}>
-                    <li style={{marginTop:"0.2cm"}}>
-                       Upfront:
-                       <ul style={{listStyleType:"square", marginTop:"0.2cm"}}>
-                           <li>
-                           Three-twelfths of the fee during the probation period in 3 equal 
-                           instalments by the 7th day of each month   
-                           </li>
-                           <li style={style.height}>
-                           Nine-twelfths of the fee upon conclusion of the probation period 
-                           of employment payable on the 7th day of the 4th month.   
-                           </li>
-                       </ul> 
-                    </li>
-                    <li style={{marginTop:"0.2cm"}}>
-                        Month-to-month:
-                        <ul style={{listStyleType:"square", marginTop:"0.2cm"}}>
-                            <li>
-                            The month-to-month fee shall be paid by the 7th day of each month
+            <ul style={{listStyleType:"decimal"}}>
+                <li>&emsp; Payment Terms:
+                    <ul style={{listStyleType:"disc"}}>
+                        <li>BMF Attorney’s fee [Insert Payment Amount] (excluding VAT). The retainer fee 
+                            can be paid upfront, or month-to-month and the payment terms can be payable 
+                            as follows:
+                        </li>
+                        <ul style={{listStyleType:"circle", marginTop:"0.1cm"}}>
+                            <li style={{marginTop:"0.2cm"}}>
+                            Upfront:
+                            <ul style={{listStyleType:"square", marginTop:"0.2cm"}}>
+                                <li>
+                                Three-twelfths of the fee during the probation period in 3 equal 
+                                instalments by the 7th day of each month   
+                                </li>
+                                <li style={style.height}>
+                                Nine-twelfths of the fee upon conclusion of the probation period 
+                                of employment payable on the 7th day of the 4th month.   
+                                </li>
+                            </ul> 
                             </li>
-                        </ul>   
-                    </li>   
-                </ul>
-            <li style={style.height}>
-            No variation or amendment to this Agreement shall be of any effect unless such 
-            amendment is put in writing and signed by all parties    
-            </li> 
-            <li style={style.height}>
-            Any documentation prepared by <strong>BMF Attorneys</strong> remains its property
-            </li>
-            </ul>
-            <p style={{fontWeight:"bold"}}>2. &emsp; Appointment</p>
-            <ul style={{listStyleType: "none", marginTop:"0.2cm"}}>
-                2.1
-                <li style={style.height}>
-                    &emsp;   
-                    The Client has procured the services of <strong>BMF Attorneys</strong> and hereby accepts 
-                    the appointment as an independent contractor of the Client for a fixed 
-                    period of time.   
+                            <li style={{marginTop:"0.2cm"}}>
+                                Month-to-month:
+                                <ul style={{listStyleType:"square", marginTop:"0.2cm"}}>
+                                    <li>
+                                    The month-to-month fee shall be paid by the 7th day of each month
+                                    </li>
+                                </ul>   
+                            </li>   
+                        </ul>
+                    <li style={style.height}>
+                    No variation or amendment to this Agreement shall be of any effect unless such 
+                    amendment is put in writing and signed by all parties    
+                    </li> 
+                    <li style={style.height}>
+                    Any documentation prepared by <strong>BMF Attorneys</strong> remains its property
+                    </li>
+                    </ul>
                 </li>
-                <li style={style.height}>
-                    2.2 &emsp;
-                    The reason for this fixed-term contract is <strong>for the appointment and completion
-                    of the</strong> [Service Description] 
+                <li style={{marginTop:"1cm"}}>
+                    &emsp; Appointment
+                    <ol style={{listStyleType:"decimal",marginTop:"0.2cm"}}>
+                        <li style={style.height}>
+                        The Client has procured the services of <strong>BMF Attorneys</strong> and hereby accepts 
+                        the appointment as an independent contractor of the Client for a fixed 
+                        period of time.   
+                        </li>
+                        <li style={style.height}>
+                        The reason for this fixed-term contract is <strong>for the appointment and completion
+                        of the</strong> [Service Description] 
+                        </li> 
+                    </ol>    
                 </li> 
+                <li style={{marginTop:"1cm"}}>
+                    &emsp; Duration
+                    <ul style={{listStyleType:"decimal",marginTop:"0.2cm"}}>
+                        <li style={style.height}>
+                        Notwithstanding the date of signature hereof, this fixed term contract shall be deemed 
+                        to have commenced on the [insert start date] and will terminate, without further notice, 
+                        on the [insert end date].    
+                        </li>
+                        <li style={style.height}>
+                        The automatic termination of the contract on the Termination Date shall not be construed 
+                        as a dismissal but as the completion of a fixed term contract.
+                        </li> 
+                    </ul>    
+                </li>   
             </ul>
         </div>
        )
@@ -81,7 +97,15 @@ export default function Content(props) {
  else if (props.page ==3)
  {
     return (
-        <div>Content 3</div>
+        <div style={style.heading3}>
+            <strong>4.</strong>
+            <p style={{marginTop:"2cm"}}>Signed at &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;on</p>
+            <p style={{marginTop:"2cm",borderBottom: "1px solid black", width:"7cm"}}></p>
+            <p>Who warrants authority on behalf of Jobox</p>
+            <p style={{marginTop:"2cm"}}>Signed at &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;on</p>
+            <p style={{marginTop:"2cm",borderBottom: "1px solid black", width:"7cm"}}></p>
+            <p>Who warrants authority on behalf of Jobox</p>
+        </div>
        )
  }
 }
@@ -108,11 +132,18 @@ const style = {
     },
     heading2:{
         marginTop:"1cm",
-        marginLeft:"2.5cm",
-        width:"15.5cm"
+        marginLeft:"2cm",
+        width:"16cm",
+        marginBottom: "4cm"
     },
     height:{
        marginTop:"0.1cm" 
+    },
+    heading3:{
+        marginTop:"1cm",
+        marginLeft:"2.5cm",
+        marginBottom: "12cm"
     }
+
 
 }

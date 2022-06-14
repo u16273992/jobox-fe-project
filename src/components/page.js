@@ -9,6 +9,12 @@ export default function Page(props) {
             <p style={styles.header}>RECTRUITMENT RATES AND TERMS AGREEMENT</p>  
         </header>
         <Content page={props.number}/>
+        { props.number !== 1 ?
+            <footer style={styles.footer}>
+            <p>PAGE {props.number} OF 3</p>
+            </footer>
+            : null
+        }
       </div>
     </div>
   )
@@ -49,6 +55,16 @@ const styles = {
       display: 'flex',
       alignSelf: 'center',
       justifyContent: 'center'
+    },
+    footer:{
+        marginLeft: "2.5cm",
+        width: "16cm",
+        borderTop: "1px solid black",
+        fontSize: "10px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "flex-end",
+        alignItems: "center"
     }
   
   }
