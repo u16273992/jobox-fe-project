@@ -24,7 +24,7 @@ export default function Content(props) {
     return (
         <div style={style.heading2}>
             <ul style={{listStyleType:"decimal"}}>
-                <li>&emsp; Payment Terms:
+                <li>&emsp; <strong>Payment Terms:</strong>
                     <ul style={{listStyleType:"disc"}}>
                         <li>BMF Attorney’s fee [Insert Payment Amount] (excluding VAT). The retainer fee 
                             can be paid upfront, or month-to-month and the payment terms can be payable 
@@ -63,7 +63,7 @@ export default function Content(props) {
                     </ul>
                 </li>
                 <li style={{marginTop:"1cm"}}>
-                    &emsp; Appointment
+                    &emsp; <strong>Appointment</strong>
                     <ol style={{listStyleType:"decimal",marginTop:"0.2cm"}}>
                         <li style={style.height}>
                         The Client has procured the services of <strong>BMF Attorneys</strong> and hereby accepts 
@@ -77,7 +77,7 @@ export default function Content(props) {
                     </ol>    
                 </li> 
                 <li style={{marginTop:"1cm"}}>
-                    &emsp; Duration
+                    &emsp; <strong>Duration</strong>
                     <ul style={{listStyleType:"decimal",marginTop:"0.2cm"}}>
                         <li style={style.height}>
                         Notwithstanding the date of signature hereof, this fixed term contract shall be deemed 
