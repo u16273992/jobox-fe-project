@@ -3,8 +3,32 @@ import React, { useState } from 'react'
 export default function Content(props) {
 
     const [clientName, setClient] = useState(''); 
+    const [serviceDesc, setDescription] = useState('');
+    const [startDate, setStartDate] = useState('');
+    const [endDate, setEndDate] = useState('');
+    const [amount, setAmount] =useState('');
+    
+    function handleNameChange(event) {
+        setClient(event.target.value);
+      }
+    
+    function handleAmountChange(event) {
+        setAmount(event.target.value);
+    }
 
- if (props.page ==1 ) 
+    function handleDescriptionChange(event) {
+        setDescription(event.target.value);
+    }
+
+    function handleStartDateChange(event) {
+        setStartDate(event.target.value);
+    }
+
+    function handleEndDateChange(event) {
+        setEndDate(event.target.value);
+    }
+
+ if (props.page ===1 ) 
  {
     return (
         <div style={style.heading1}>
@@ -15,23 +39,34 @@ export default function Content(props) {
                 <p>with company registration number 2022/123456/07</p>
             </div>
             <p style={{marginTop:"1cm"}}>and</p>
-            <input 
-            placeholder= '[INSERT CLIENT NAME]'
-            value = {clientName}
-            style={style.input1}>
-            </input>
+            <div style={style.inputView}>
+                <input 
+                placeholder= '[INSERT CLIENT NAME]'
+                type="text"
+                value = {clientName}
+                onChange = {handleNameChange}
+                style={style.input1}/> 
+            </div>
             <p style={{marginTop:"2cm", fontSize:"14px"}}>Collectively referred herein as the “parties”</p>
         </div>
         )
  }
- else if (props.page ==2)
+ else if (props.page ===2)
  {
     return (
         <div style={style.heading2}>
             <ul style={{listStyleType:"decimal", fontWeight:"bold"}}>
                 <li>&emsp;Payment Terms:
                     <ul style={{listStyleType:"disc",fontWeight:"normal"}}>
-                        <li>BMF Attorney’s fee [Insert Payment Amount] (excluding VAT). The retainer fee 
+                        <li>BMF Attorney’s fee &ensp; 
+                            <input
+                            placeholder='[Insert Payment Amount]'
+                            value={amount}
+                            onChange={handleAmountChange}
+                            style={{borderWidth:"0", width:"4.8cm", fontSize:"16px",textAlign:"center"}}
+                            /> 
+                            &ensp;
+                            (excluding VAT). The retainer fee 
                             can be paid upfront, or month-to-month and the payment terms can be payable 
                             as follows:
                         </li>
@@ -77,7 +112,15 @@ export default function Content(props) {
                         </li>
                         <li style={style.height}>
                         The reason for this fixed-term contract is <strong>for the appointment and completion
-                        of the</strong> [Service Description] 
+                        of the</strong>&ensp; 
+                            <textarea
+                            placeholder='[Insert Service Description]'
+                            value={serviceDesc}
+                            onChange={handleDescriptionChange}
+                            style={{borderWidth:"0", width:"4.8cm", fontSize:"16px", width:"13.5cm", fontFamily:"sans-serif"}}
+                            rows={3}
+                            /> 
+                            &ensp; 
                         </li> 
                     </ol>    
                 </li> 
@@ -86,8 +129,24 @@ export default function Content(props) {
                     <ul style={{listStyleType:"decimal",marginTop:"0.2cm", fontWeight:"normal"}}>
                         <li style={style.height}>
                         Notwithstanding the date of signature hereof, this fixed term contract shall be deemed 
-                        to have commenced on the [insert start date] and will terminate, without further notice, 
-                        on the [insert end date].    
+                        to have commenced on the 
+                        &ensp; 
+                        <input
+                        placeholder='[insert start date]'
+                        type="date"
+                        value={startDate}
+                        onChange={handleStartDateChange}
+                        style={{borderWidth:"0",textAlign:"center"}}
+                        /> (start date)
+                        and will terminate, without further notice, 
+                        on the 
+                        <input
+                        placeholder='[insert end date]'
+                        type="date"
+                        value={endDate}
+                        onChange={handleEndDateChange}
+                        style={{borderWidth:"0",textAlign:"center"}}
+                        /> (end date)
                         </li>
                         <li style={style.height}>
                         The automatic termination of the contract on the Termination Date shall not be construed 
@@ -99,7 +158,7 @@ export default function Content(props) {
         </div>
        )
  }
- else if (props.page ==3)
+ else if (props.page ===3)
  {
     return (
         <div style={style.heading3}>
@@ -128,18 +187,25 @@ const style = {
         flexDirection:"column",
         marginRight:"2.5cm"
     },
-    input1:{
+    inputView:{
         display:"flex",
         flexDirection:"column",
         alignItems:"center",
+        justifyContent:"center",
         marginTop:"1cm",
-        marginRight:"2.5cm"
+        marginRight:"2.5cm",
+    },
+    input1:{
+        borderWidth:"0", 
+        textAlign:"center", 
+        fontSize:"17px", 
+        fontWeight:"bold"
     },
     heading2:{
         marginTop:"1cm",
         marginLeft:"2cm",
         width:"16cm",
-        marginBottom: "4cm"
+        marginBottom: "3cm"
     },
     height:{
        marginTop:"0.1cm" 
