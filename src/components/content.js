@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function Content(props) {
+
+    const [clientName, setClient] = useState(''); 
+
  if (props.page ==1 ) 
  {
     return (
@@ -12,9 +15,11 @@ export default function Content(props) {
                 <p>with company registration number 2022/123456/07</p>
             </div>
             <p style={{marginTop:"1cm"}}>and</p>
-            <div style={style.input1}>
-            [INSERT CLIENT NAME]
-            </div>
+            <input 
+            placeholder= '[INSERT CLIENT NAME]'
+            value = {clientName}
+            style={style.input1}>
+            </input>
             <p style={{marginTop:"2cm", fontSize:"14px"}}>Collectively referred herein as the “parties”</p>
         </div>
         )
@@ -23,9 +28,9 @@ export default function Content(props) {
  {
     return (
         <div style={style.heading2}>
-            <ul style={{listStyleType:"decimal"}}>
-                <li>&emsp; <strong>Payment Terms:</strong>
-                    <ul style={{listStyleType:"disc"}}>
+            <ul style={{listStyleType:"decimal", fontWeight:"bold"}}>
+                <li>&emsp;Payment Terms:
+                    <ul style={{listStyleType:"disc",fontWeight:"normal"}}>
                         <li>BMF Attorney’s fee [Insert Payment Amount] (excluding VAT). The retainer fee 
                             can be paid upfront, or month-to-month and the payment terms can be payable 
                             as follows:
@@ -63,8 +68,8 @@ export default function Content(props) {
                     </ul>
                 </li>
                 <li style={{marginTop:"1cm"}}>
-                    &emsp; <strong>Appointment</strong>
-                    <ol style={{listStyleType:"decimal",marginTop:"0.2cm"}}>
+                    &emsp; Appointment
+                    <ol style={{listStyleType:"decimal",marginTop:"0.2cm", fontWeight:"normal"}}>
                         <li style={style.height}>
                         The Client has procured the services of <strong>BMF Attorneys</strong> and hereby accepts 
                         the appointment as an independent contractor of the Client for a fixed 
@@ -78,7 +83,7 @@ export default function Content(props) {
                 </li> 
                 <li style={{marginTop:"1cm"}}>
                     &emsp; <strong>Duration</strong>
-                    <ul style={{listStyleType:"decimal",marginTop:"0.2cm"}}>
+                    <ul style={{listStyleType:"decimal",marginTop:"0.2cm", fontWeight:"normal"}}>
                         <li style={style.height}>
                         Notwithstanding the date of signature hereof, this fixed term contract shall be deemed 
                         to have commenced on the [insert start date] and will terminate, without further notice, 
