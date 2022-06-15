@@ -1,0 +1,18 @@
+Amount of hours spent on this project.
+
+Start date      : 14 June 2022 [13h00]
+End date        : 15 June 2022 [22h00]
+
+breakdown (approximations):
+
+updating linux environment                                      : 1h30 
+creating project template and installing relevant libraries     : 0h30
+creating UI for all 3 pages including download button           : 6h00
+creating inputs                                                 : 1h30
+download functionality                                          : 1h30
+
+
+total hours spent on the project                                : 11h00
+
+( ͡ᵔ ͜ʖ ͡ᵔ)
+
