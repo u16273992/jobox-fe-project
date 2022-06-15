@@ -3,7 +3,7 @@ import Page from './page';
 
 export default function Contract() {
   return (
-    <div>
+    <div id ="downloadContract">
         <Page number={1}/>
         <Page number={2}/>
         <Page number={3}/>

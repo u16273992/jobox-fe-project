@@ -1,18 +1,31 @@
 import './App.css';
 import Contract from './components/contract';
+import jsPDF from 'jspdf';
+import html2canvas from "html2canvas";
+
 
 
 function App() {
 
-  function handleSubmit(e) {
-    e.preventDefault();    
-    console.log('You clicked submit.');
+  function downloadDocument(){
+    const input = document.getElementById("downloadContract");
+    html2canvas(input).then((canvas)=>{
+      const imgData = canvas.toDataURL("image/png");
+      const pdf = new jsPDF();
+      pdf.addImage(imgData, "JPEG",-149,-3);
+      pdf.addPage();
+      pdf.addImage(imgData, "JPEG",-149,-303);
+      pdf.addPage();
+      pdf.addImage(imgData, "JPEG",-149,-603);
+      pdf.save("BMF_ATTORNEYS CONTRACT")
+    })
   }
+  
 
   return (
     <div style={styles.background}>
       <Contract/>
-      <button onClick={handleSubmit} style={styles.button}>
+      <button onClick={downloadDocument} style={styles.button}>
         DOWNLOAD CONTRACT
       </button>
     </div>

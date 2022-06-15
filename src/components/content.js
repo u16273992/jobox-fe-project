@@ -117,7 +117,7 @@ export default function Content(props) {
                             placeholder='[Insert Service Description]'
                             value={serviceDesc}
                             onChange={handleDescriptionChange}
-                            style={{borderWidth:"0", width:"4.8cm", fontSize:"16px", width:"13.5cm", fontFamily:"sans-serif"}}
+                            style={{borderWidth:"0", fontSize:"16px", width:"13.5cm", fontFamily:"sans-serif"}}
                             rows={3}
                             /> 
                             &ensp; 

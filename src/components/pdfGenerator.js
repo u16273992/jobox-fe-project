@@ -3,30 +3,6 @@ import React from 'react';
 export default function PDFgenerator() {
   return (
     <div>
-    <div style={styles.pages}>
-      <div style={styles.page}>
-        <header style={styles.header}></header>
-        <h1 style={styles.heading}>
-          hello from pdfGenerator
-        </h1> 
-      </div>
-    </div>
-    <div style={styles.pages}>
-      <div style={styles.head}></div>
-      <div style={styles.page}>
-        <h1 style={styles.heading}>
-          hello from pdfGenerator
-        </h1> 
-      </div>
-    </div>
-    <div style={styles.pages}>
-      <div style={styles.head}></div>
-      <div style={styles.page}>
-        <h1 style={styles.heading}>
-          hello from pdfGenerator
-        </h1> 
-      </div>
-    </div>
     </div>
   )
 }
