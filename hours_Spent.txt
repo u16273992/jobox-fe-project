@@ -19,5 +19,6 @@ total hours spent on the project                                : 11h00
 -------refractoring update: 20 June 2022------------------------------
 
 refractoring contract page                                      : 0h15
+refractoring download contract function                         : 0h10
 
-update time spent on the project                                : 11h15
+update time spent on the project                                : 11h25
