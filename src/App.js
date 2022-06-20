@@ -12,11 +12,14 @@ function App() {
     html2canvas(input).then((canvas)=>{
       const imgData = canvas.toDataURL("image/png");
       const pdf = new jsPDF();
-      pdf.addImage(imgData, "JPEG",-139.5,-3);
-      pdf.addPage();
-      pdf.addImage(imgData, "JPEG",-139.5,-303);
-      pdf.addPage();
-      pdf.addImage(imgData, "JPEG",-139.5,-603);
+
+      for(let i = 0; i < 3; i++)
+      {
+        pdf.addImage(imgData, "JPEG",-139.5,-3 - (i*300));
+        
+        if (i !== 2)
+          pdf.addPage();
+      }
       pdf.save("BMF_ATTORNEYS CONTRACT")
     })
   }
